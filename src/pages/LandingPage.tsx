@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Shield, Users, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import AMDONlogo from "@/asset/images/AMDON-logo.png";
 
 const LandingPage = () => {
   return (
@@ -10,13 +11,11 @@ const LandingPage = () => {
       <header className="border-b bg-card">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">A</span>
-            </div>
-            <div>
-              <h1 className="font-heading font-bold text-lg leading-tight">AMDON</h1>
-              <p className="text-[11px] text-muted-foreground leading-tight">Automobile Dealers Association</p>
-            </div>
+
+            <img src={AMDONlogo} alt="AMDON Logo" className="h-10 w-auto object contain"  />
+           
+          
+    
           </div>
           <div className="flex items-center gap-2">
             <Link to="/query">

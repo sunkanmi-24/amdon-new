@@ -8,6 +8,7 @@ import {
   updatePhoto,
   MemberProfile,
 } from "@/lib/api";
+  import AMDONlogo from "@/asset/images/AMDON-logo.png"; 
 import { clearSession, isLoggedIn } from "@/lib/auth";
 import { toast } from "sonner";
 import {
@@ -423,12 +424,10 @@ const DashboardPage = () => {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">A</span>
-              </div>
+              <img src={AMDONlogo} alt="AMDON Logo" className="h-8 w-auto object contain"  />
             </Link>
             <span className="font-heading font-bold text-sm hidden sm:block">
-              AMDON Dashboard
+              ccfDashboard
             </span>
           </div>
           <Button
