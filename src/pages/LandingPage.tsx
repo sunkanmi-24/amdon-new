@@ -31,8 +31,18 @@ const LandingPage = () => {
       </header>
 
       {/* Hero */}
-      <section className="py-20 sm:py-28">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
+      <section className="relative py-20 sm:py-28 overflow-hidden">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Cars"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/95" />
+        </div>
+
+        <div className="container mx-auto px-4 text-center max-w-3xl relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
